@@ -34,7 +34,7 @@ const services = [
 
 export function ToolBar({}: Props) {
   return (
-    <div className="bg-blue-600 h-screen w-[250px] shadow-lg fixed">
+    <div className="bg-blue-600 h-screen w-[15%] shadow-lg fixed">
       <div className="h-[7%] p-4 text-white font-bold text-xl">
         Banking Services
       </div>

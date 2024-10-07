@@ -1,9 +1,10 @@
 export default function Loan() {
   return (
-    <div className="w-[70%] mt-5 mb-5 mr-16 bg-white p-6 shadow-lg rounded-lg">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+    <div className="w-[60%] bg-white p-6 shadow-lg rounded-lg">
+      <h2 className="text-2xl font-bold text-left text-gray-800">
         Loan Service
       </h2>
+      <div className="w-full h-[2px] bg-black mb-5"></div>
       <form>
         <div className="mb-4">
           <label className="block text-gray-700">Full Name</label>
