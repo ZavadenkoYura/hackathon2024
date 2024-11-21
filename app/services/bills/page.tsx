@@ -1,9 +1,9 @@
-export default function Loans() {
+export default function Bills() {
   return (
     <div className="w-full flex items-center justify-center min-h-screen">
       <div className="w-[90%] md:w-[70%] lg:w-[50%] bg-white p-8 rounded-lg shadow-lg border border-gray-300">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Loan Service
+          Pay Bills
         </h2>
         <div className="w-full h-[2px] bg-gray-300 mb-6"></div>
         <form>
@@ -46,79 +46,45 @@ export default function Loans() {
             />
           </div>
 
-          {/* Loan Information */}
           <div className="mb-5">
             <label className="block text-gray-700 font-medium mb-2">
-              Loan Amount
+              Bill Type
+            </label>
+            <select
+              name="billType"
+              className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            >
+              <option value="">Select Bill Type</option>
+              <option value="Electricity">Electricity</option>
+              <option value="Water">Water</option>
+              <option value="Internet">Internet</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div className="mb-5">
+            <label className="block text-gray-700 font-medium mb-2">
+              Bill Amount
             </label>
             <input
               type="number"
-              name="loanAmount"
+              name="billAmount"
               className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter loan amount"
+              placeholder="Enter the bill amount"
               required
             />
           </div>
 
           <div className="mb-5">
             <label className="block text-gray-700 font-medium mb-2">
-              Loan Term (Months)
-            </label>
-            <input
-              type="number"
-              name="loanTerm"
-              className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter loan term in months"
-              required
-            />
-          </div>
-
-          <div className="mb-5">
-            <label className="block text-gray-700 font-medium mb-2">
-              Purpose of Loan
-            </label>
-            <textarea
-              name="loanPurpose"
-              className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Describe the purpose of the loan"
-              required
-            ></textarea>
-          </div>
-          <div className="mb-5">
-            <label className="block text-gray-700 font-medium mb-2">
-              Employer Name
+              Billing Account Number
             </label>
             <input
               type="text"
-              name="employerName"
+              name="billingAccountNumber"
               className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter employer name"
-              required
-            />
-          </div>
-
-          <div className="mb-5">
-            <label className="block text-gray-700 font-medium mb-2">
-              Monthly Income ($)
-            </label>
-            <input
-              type="number"
-              name="monthlyIncome"
-              className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter your monthly income"
-              required
-            />
-          </div>
-
-          <div className="mb-5">
-            <label className="block text-gray-700 font-medium mb-2">
-              Bank Account Number
-            </label>
-            <input
-              type="text"
-              name="bankAccountNumber"
-              className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              placeholder="Enter your bank account number"
+              placeholder="Enter billing account number"
               required
             />
           </div>
@@ -127,7 +93,7 @@ export default function Loans() {
             type="submit"
             className="w-full bg-green-600 text-white p-3 rounded-md shadow-lg hover:bg-green-700 transition-all duration-300"
           >
-            Apply for Loan
+            Pay Bill
           </button>
         </form>
       </div>

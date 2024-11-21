@@ -1,5 +1,19 @@
-import { AuthForm } from "../../components/AuthForm";
+import { getServerSessionAuth } from "@/app/api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
+import { Form } from "./Form";
 
-export default function Signup() {
-  return <AuthForm title="Sign up" />;
+type Props = {
+  title: string;
+};
+
+export default async function Signup({}: Props) {
+  const session = await getServerSessionAuth();
+
+  if (session?.user) redirect("/services");
+
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <Form />
+    </div>
+  );
 }
